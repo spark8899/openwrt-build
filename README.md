@@ -37,7 +37,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_generate
 ```
 
-## 本项目组件列表
+## x86_64组件列表
 
 ```
 Target Images ---> BuildVMwareimage files (VMDK) 取消
@@ -90,6 +90,46 @@ LuCI ---> Applications ---> luci-app-wireguard #wireguard vpn
 LuCI ---> Applications ---> luci-app-wol   #WOL网络唤醒
 LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 LuCI ---> Applications ---> luci-app-zerotier  #ZeroTier内网穿透
+```
+
+## xiaoyu_c5组件列表
+
+```
+Target System ---> MediaTek Ralink MIPS #勾选
+Subtarget ---> MT7621 base boards #勾选
+Target Profile ---> XiaoYu XY-C5
+Target Images ---> squashfs #勾选
+Global build settings ---> Enalbe IPv6 support in packages #勾选，其它默认
+Base system ---> dnsmqsq-full --> Build with DHCPv6 support. #勾选
+Base system ---> dnsmqsq-full --> Build with DNSSEC support. #勾选
+Extra packages ---> ipv6help #勾选
+Utilities --> Editors --> vim #vi 编辑器
+Utilities --> disc --> cfdisk #分区工具
+Utilities --> disc --> fdisk #分区工具
+Utilities --> disc --> lsblk #磁盘列举工具
+Utilities --> Filesystem --> resize2fs #调整文件系统大小
+LuCI ---> Applications ---> luci-app-argon-config  #Argon主题配置插件（Le库以外的插件）
+LuCI ---> Applications ---> luci-app-arpbind  #IP/MAC绑定
+LuCI ---> Applications ---> luci-app-autoreboot  #计划重启
+LuCI ---> Applications ---> luci-app-commands  #command
+LuCI ---> Applications ---> luci-app-ddns   #动态域名 DNS
+LuCI ---> Applications ---> luci-app-eqos  #基于IP地址限速（Le库以外的插件）
+LuCI ---> Applications ---> luci-app-filetransfer  #文件传输
+LuCI ---> Applications ---> luci-app-firewall   #添加防火墙
+LuCI ---> Applications ---> luci-app-frpc   #内网穿透Frp客户端
+LuCI ---> Applications ---> luci-app-nlbwmon   #网络带宽监视器
+LuCI ---> Applications ---> luci-app-ntpc   #ntp time config
+LuCI ---> Applications ---> luci-app-passwall   #passwall科学上网（ChinaDNS-NG,Haproxy,PDNSD,SS-client,SSR-client,Simple-Obfs,Trojan-Plus,V2ray-Plugin,Xray-Plugin）
+LuCI ---> Applications ---> luci-app-ramfree  #释放内存
+LuCI ---> Applications ---> luci-app-ttyd   #网页终端命令行
+LuCI ---> Applications ---> luci-app-turboacc   #Turbo ACC 网络加速(Flow,BBR)
+LuCI ---> Applications ---> luci-app-unblockmusic  #网易云音乐解锁
+LuCI ---> Applications ---> luci-app-upnp  #upnp
+LuCI ---> Applications ---> luci-app-vlmcsd  #kms server
+LuCI ---> Applications ---> luci-app-watchcat # 断网检测功能与定时重启
+LuCI ---> Applications ---> luci-app-wireguard #wireguard vpn
+LuCI ---> Applications ---> luci-app-wol   #WOL网络唤醒
+LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 ```
 
 ## Credits
